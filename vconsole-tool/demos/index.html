@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vconsole-toll demo</title>
+</head>
+
+<body>
+    <h1>VConsole Tools For Debug</h1>
+    <div id="app">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./../dist/VConsoleTool.js"></script>
+    <script>
+        (function(){
+            var vm = new Vue({
+                el: '#app',
+            });
+            var VConsoleTool = window["VConsoleTool"];
+            new VConsoleTool({});
+        })();
+    </script>
+</body>
+
+</html>

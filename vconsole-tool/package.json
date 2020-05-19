@@ -1,0 +1,48 @@
+{
+  "name": "vconsole-tool",
+  "version": "1.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "homepage": "",
+  "scripts": {
+    "build": "npm run es && npm run es-vue && npm run umd && npm run umd-vue",
+    "es-vue": "cross-env NODE_ENV=production format=es suffix=vue.esm rollup -c ",
+    "es": "cross-env NODE_ENV=production format=es  suffix=esm rollup -c",
+    "umd": "cross-env NODE_ENV=production format=umd  suffix=min  rollup -c",
+    "umd-vue": "cross-env NODE_ENV=production format=umd  suffix=vue.min  rollup -c",
+    "dev": "cross-env NODE_ENV=development format=umd rollup -c",
+    "dev-vue": "cross-env NODE_ENV=development format=umd suffix=vue rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "console",
+    "debug",
+    "mobile",
+    "touch"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-external-helpers": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "cross-env": "^6.0.3",
+    "rollup": "^1.27.13",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-browsersync": "^1.1.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "uglify-es": "^3.3.9"
+  },
+  "dependencies": {
+    "sessionstorage": "^0.1.0",
+    "storejs": "^1.0.25",
+    "vconsole": "^3.3.4"
+  },
+  "author": "Linq",
+  "license": "ISC"
+}
